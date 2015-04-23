@@ -18,7 +18,7 @@ Y i Йй на початку слова в інших позиціях Yosypivka
 Кк Kk Kyiv Kovalenko -> Київ Коваленко<br/>
 Ll Лл Lebedyn Leonid -> Лебедин Леонід<br/>
 Mm Мм Mykolaiv Marynych -> Миколаїв Маринич<br/>
-Nn Нн Nizhyn Nataliіa _> Ніжин Наталія<br/>
+Nn Нн Nizhyn Nataliіa -> Ніжин Наталія<br/>
 Oo Оо Odesa Onyshchenko -> Одеса Онищенко<br/>
 Pp Пп Poltava Petro -> Полтава Петро<br/>
 Rr Рр Reshetylivka Rybchynskyi -> Решетилівка Рибчинськй<br/>
