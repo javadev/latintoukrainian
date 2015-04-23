@@ -1,11 +1,11 @@
 # latintoukrainian
 The utility class to convert latin words to ukrainian characters
 
- Aа Аа Alushta Andrii -> Алушта Андрій 
- Bb Бб Borshchahivkа Borysenko -> Борщагівка Борисенко 
- Vv Вв Vinnytsia Volodymyr -> Вінниця Володимир 
- Hh Гг Hadiach Bohdan Zghurskyi -> Гадяч Богдан Згурський 
- Gg Ґґ Galagan Gorgany -> Ґалаґан Ґорґани 
+  Aа Аа Alushta Andrii -> Алушта Андрій 
+  Bb Бб Borshchahivkа Borysenko -> Борщагівка Борисенко 
+  Vv Вв Vinnytsia Volodymyr -> Вінниця Володимир 
+  Hh Гг Hadiach Bohdan Zghurskyi -> Гадяч Богдан Згурський 
+  Gg Ґґ Galagan Gorgany -> Ґалаґан Ґорґани 
  Dd Дд Donetsk Dmytro -> Донецьк Дмитро 
  Eе Ее Rivne Oleh Esman -> Рівне Олег Есмань 
  Ye ie Єє на початку слова в інших позиціях Yenakiieve Haievych Koropie -> Єнакієве Гаєвич Короп’є 
