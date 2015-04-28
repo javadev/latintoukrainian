@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.github</groupId>
-  <artifactId>latintoukrainianto</artifactId>
+  <artifactId>latintoukrainian</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Latin to Ukrainian converter</name>
@@ -50,7 +50,7 @@
           <configuration>
               <archive>
                   <manifest>
-                      <mainClass>com.github.latintoukrainian.LatinToUkrainian</mainClass>
+                      <mainClass>com.github.latintoukrainian.LatintoukrainianApp</mainClass>
                   </manifest>
               </archive>
           </configuration>
