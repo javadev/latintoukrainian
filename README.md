@@ -34,4 +34,4 @@ Shch shch Щщ Shcherbukhy Hoshcha Harashchenko -> Щербухи Гоща Га�
 Yu іu Юю на початку слова в інших позиціях  Yurii Koriukivka -> Юрій Корюківка<br/>
 Ya ia Яя на початку слова в інших позиціях Yahotyn Yaroshenko Kostiantyn Znamianka Feodosiia -> Яготин Ярошенко Костянтин Знам’янка Феодосія<br/>
 
-[![Screen short](https://raw.github.com/javadev/latintoukrainian/master/latintoukrainian.png)](http://javadev.github.com/latintoukrainian/)
+[![Screen short](https://raw.github.com/javadev/latintoukrainian/master/latintoukrainian.png)](https://github.com/javadev/latintoukrainian/)
