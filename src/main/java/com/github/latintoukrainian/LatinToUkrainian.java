@@ -20,9 +20,11 @@ package com.github.latintoukrainian;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * LatinToUkrainian utility class.
@@ -142,6 +144,8 @@ public class LatinToUkrainian {
         }});
     }};
 
+    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", "."));
+
     private static class ConvertCase {
         private final Map.Entry<String, String> convert;
         private final boolean lowcase;
@@ -206,7 +210,7 @@ public class LatinToUkrainian {
                 if (" ".equals(curChar)) {
                     prevConvertCase = null;
                     result.append(' ');
-                } else if (curChar.matches("\\n")) {
+                } else if (curChar.matches("\\n") || PUNCTUATIONS.contains(curChar)) {
                     result.append(curChar);
                 }
                 continue;

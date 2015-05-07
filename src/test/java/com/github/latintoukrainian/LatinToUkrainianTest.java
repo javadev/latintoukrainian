@@ -108,6 +108,11 @@ public class LatinToUkrainianTest {
 //        equal("Yahotyn Yaroshenko Kostiantyn Znamianka Feodosiia", "Яготин Ярошенко Костянтин Знам’янка Феодосія");
     }
 
+    @Test 
+    public void punctuations() {
+        equal("I - pokazhem, shcho my, brattia, kozatskoho rodu!\n", "І - покажем, що ми, браття, козацкого роду!\n");
+    }
+
     @Test
     public void main() {
         LatinToUkrainian.main(new String[] {});
