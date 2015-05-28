@@ -113,6 +113,12 @@ public class LatinToUkrainianTest {
         equal("I - pokazhem, shcho my, brattia, kozatskoho rodu!\n", "І - покажем, що ми, браття, козацкого роду!\n");
     }
 
+    @Test 
+    public void words_with_iy_at_the_end() {
+        equal("Anatolii", "Анатолій");
+        equal("Hennadii", "Геннадій");
+    }
+
     @Test
     public void main() {
         LatinToUkrainian.main(new String[] {});
