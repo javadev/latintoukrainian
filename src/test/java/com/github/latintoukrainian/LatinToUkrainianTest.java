@@ -117,6 +117,7 @@ public class LatinToUkrainianTest {
     public void words_with_iy_at_the_end() {
         equal("Anatolii", "Анатолій");
         equal("Hennadii", "Геннадій");
+        equal("Serhii", "Сергій");
     }
 
     @Test
