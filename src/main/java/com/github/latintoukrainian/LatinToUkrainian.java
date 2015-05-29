@@ -125,6 +125,7 @@ public class LatinToUkrainian {
 
     private static final Map<String, Map<List<String>, String>> END_TIPS = new LinkedHashMap<String, Map<List<String>, String>>() {{
         put("i", new HashMap<List<String>, String>() {{
+            put(Arrays.asList("г", "і"), "й");
             put(Arrays.asList("д", "і"), "й");
             put(Arrays.asList("к", "и"), "й");
             put(Arrays.asList("л", "і"), "й");
