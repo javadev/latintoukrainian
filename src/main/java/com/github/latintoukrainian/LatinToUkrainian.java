@@ -174,11 +174,13 @@ public class LatinToUkrainian {
         latToCyrFirst = new HashMap<String, List<ConvertCase>>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_FIRST.entrySet()) {
             putMyObject(latToCyrFirst, convert.getValue(), new ConvertCase(convert, false));
+            putMyObject(latToCyrFirst, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
             putMyObject(latToCyrFirst, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
         latToCyrMiddle = new HashMap<String, List<ConvertCase>>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_MIDDLE.entrySet()) {
             putMyObject(latToCyrMiddle, convert.getValue(), new ConvertCase(convert, false));
+            putMyObject(latToCyrMiddle, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
             putMyObject(latToCyrMiddle, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
     }

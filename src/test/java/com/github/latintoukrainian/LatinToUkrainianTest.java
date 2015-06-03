@@ -120,6 +120,15 @@ public class LatinToUkrainianTest {
         equal("Serhii", "Сергій");
     }
 
+    @Test 
+    public void words_with_capital_letters() {
+        equal("YA", "Я");
+        equal("NIANIA", "НЯНЯ");
+        equal("niania", "няня");
+        equal("Ya", "Я");
+        equal("ya", "я");
+    }
+
     @Test
     public void main() {
         LatinToUkrainian.main(new String[] {});
