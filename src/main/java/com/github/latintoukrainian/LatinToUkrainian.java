@@ -154,6 +154,9 @@ public class LatinToUkrainian {
     }};
     private static final Map<String, String> WORDS_WITH_COMMA = new LinkedHashMap<String, String>() {{
         put("батки", "батьки");
+        put("Знамянка", "Знам’янка");
+        put("Кишенки", "Кишеньки");
+        put("Троц", "Троць");
     }};
 
     private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", "."));

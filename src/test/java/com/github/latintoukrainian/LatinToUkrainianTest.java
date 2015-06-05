@@ -87,7 +87,7 @@ public class LatinToUkrainianTest {
 //Сс Ss
         equal("Sumy Solomiia", "Суми Соломія");
 //Тт Tt
-//        equal("Ternopil Trots", "Тернопіль Троць");
+        equal("Ternopil Trots", "Тернопіль Троць");
 //Уу Uu
         equal("Uzhhorod Uliana", "Ужгород Уляна");
 //Фф Ff
@@ -99,13 +99,13 @@ public class LatinToUkrainianTest {
 //Чч Ch ch
         equal("Chernivtsi Shevchenko", "Чернівці Шевченко");
 //Шш Sh sh
-//        equal("Shostka Kyshenky", "Шостка Кишеньки");
+        equal("Shostka Kyshenky", "Шостка Кишеньки");
 //Щщ Shch shch
         equal("Shcherbukhy Hoshcha Harashchenko", "Щербухи Гоща Гаращенко");
 //Юю Yu іu на початку слова в інших позиціях
         equal("Yurii Koriukivka", "Юрій Корюківка");
 //Яя Ya ia на початку слова в інших позиціях
-//        equal("Yahotyn Yaroshenko Kostiantyn Znamianka Feodosiia", "Яготин Ярошенко Костянтин Знам’янка Феодосія");
+        equal("Yahotyn Yaroshenko Kostiantyn Znamianka Feodosiia", "Яготин Ярошенко Костянтин Знам’янка Феодосія");
     }
 
     @Test 
