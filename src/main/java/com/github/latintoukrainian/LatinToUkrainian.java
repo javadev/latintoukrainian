@@ -128,10 +128,12 @@ public class LatinToUkrainian {
             put(Arrays.asList("г", "і"), "й");
             put(Arrays.asList("д", "і"), "й");
             put(Arrays.asList("к", "и"), "й");
+            put(Arrays.asList("к", "і"), "й");
             put(Arrays.asList("л", "і"), "й");
             put(Arrays.asList("р", "і"), "й");
             put(Arrays.asList("р", "и"), "й");
             put(Arrays.asList("с", "і"), "й");
+            put(Arrays.asList("в", "о"), "ї");
         }});
         put("l", new HashMap<List<String>, String>() {{
             put(Arrays.asList("п", "і"), "ль");

@@ -118,6 +118,8 @@ public class LatinToUkrainianTest {
         equal("Anatolii", "Анатолій");
         equal("Hennadii", "Геннадій");
         equal("Serhii", "Сергій");
+        equal("yakii", "якій");
+        equal("tvoi", "твої");
     }
 
     @Test 
