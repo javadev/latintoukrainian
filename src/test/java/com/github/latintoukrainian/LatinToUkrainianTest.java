@@ -18,6 +18,7 @@
 
 package com.github.latintoukrainian;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -114,6 +115,18 @@ public class LatinToUkrainianTest {
     }
 
     @Test 
+    public void words_with_iy_in_the_middle() {
+        equal("spilkuiutsia", "спілкуються");
+        equal("tvoikh", "твоїх");
+    }
+
+    @Test
+    @Ignore
+    public void words_with_soft_sign() {
+        equal("batky", "батьки");
+    }
+
+    @Test
     public void words_with_iy_at_the_end() {
         equal("Anatolii", "Анатолій");
         equal("Hennadii", "Геннадій");
@@ -122,7 +135,7 @@ public class LatinToUkrainianTest {
         equal("tvoi", "твої");
     }
 
-    @Test 
+    @Test
     public void words_with_capital_letters() {
         equal("YA", "Я");
         equal("NIANIA", "НЯНЯ");
