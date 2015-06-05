@@ -18,7 +18,6 @@
 
 package com.github.latintoukrainian;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -121,9 +120,9 @@ public class LatinToUkrainianTest {
     }
 
     @Test
-    @Ignore
     public void words_with_soft_sign() {
         equal("batky", "батьки");
+        equal("yakii spilkuiutsia tvoi batky", "якій спілкуються твої батьки");
     }
 
     @Test
