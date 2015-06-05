@@ -152,6 +152,9 @@ public class LatinToUkrainian {
             put(Arrays.asList("е", "ц"), "ьк");
         }});
     }};
+    private static final Map<String, String> WORDS_WITH_COMMA = new LinkedHashMap<String, String>() {{
+        put("батки", "батьки");
+    }};
 
     private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", "."));
 
@@ -254,6 +257,7 @@ public class LatinToUkrainian {
                 }
                 if (index >= name.length() || name.substring(index + INDEX_1, index + INDEX_2).equals(" ")) {
                     checkChar(result, convertCase, prevPrevConvertCase, prevConvertCase, END_TIPS);
+                    checkWordsWithComma(result, WORDS_WITH_COMMA);
                 } else {
                     checkChar(result, convertCase, prevPrevConvertCase, prevConvertCase, MIDDLE_TIPS);
                 }
@@ -266,10 +270,11 @@ public class LatinToUkrainian {
     
     /**
      * Converts character from latinic to cyrilic.
-     * @param result resut buffer to store string in latin
+     * @param result result buffer to store string in cyrilic
      * @param convertCase current character object
      * @param prevPrevConvertCase prev prev character object
      * @param prevConvertCase prev character object
+     * @param tips convert tips
      */
     private static void checkChar(StringBuilder result, List<ConvertCase> convertCase,
         List<ConvertCase> prevPrevConvertCase, List<ConvertCase> prevConvertCase,
@@ -287,6 +292,21 @@ public class LatinToUkrainian {
             }
         }
         result.append(convertCase.get(0).isLowcase() ? cyrName.toLowerCase() : cyrName);
+    }
+
+    /**
+     * Converts character from latinic to cyrilic.
+     * @param result result buffer to store string in cyrilic
+     * @param wordsWithComma words to replace in buffer
+     */
+    private static void checkWordsWithComma(StringBuilder result, Map<String, String> wordsWithComma) {
+        for (final Map.Entry<String, String> word : wordsWithComma.entrySet()) {
+            final String key = word.getKey();
+            if (key.length() <= result.length() && result.substring(result.length() - key.length(), result.length()).equals(key)) {
+                result.replace(result.length() - key.length(), result.length(), word.getValue());
+                break;
+            }
+        }
     }
 
     public static void main(String[] args) {
