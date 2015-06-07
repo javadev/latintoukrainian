@@ -49,7 +49,7 @@ public class LatinToUkrainianTest {
 //Вв Vv
         equal("Vinnytsia Volodymyr", "Вінниця Володимир");
 //Гг Hh
-//        equal("Hadiach Bohdan Zghurskyi", "Гадяч Богдан Згурський");
+        equal("Hadiach Bohdan Zghurskyi", "Гадяч Богдан Згурський");
 //Ґґ Gg
         equal("Galagan Gorgany", "Ґалаґан Ґорґани");
 //Дд Dd

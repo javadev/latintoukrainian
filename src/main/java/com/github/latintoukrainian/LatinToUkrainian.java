@@ -220,10 +220,11 @@ public class LatinToUkrainian {
         for (int index = 0; index < name.length(); index += 1) {
             final String curChar = name.substring(index, index + INDEX_1);
             final String curChar2 = name.substring(index, Math.min(index + INDEX_2, name.length()));
+            final String curChar3 = name.substring(index, Math.min(index + INDEX_3, name.length()));
             final String curChar4 = name.substring(index, Math.min(index + INDEX_4, name.length()));
 //System.out.println("curChar - " + curChar + ", curChar2 - " + curChar2);
-            if (latToCyrFirst.get(curChar4) == null && latToCyrFirst.get(curChar2) == null
-                    && latToCyrFirst.get(curChar) == null) {
+            if (latToCyrFirst.get(curChar4) == null && latToCyrFirst.get(curChar3) == null
+                && latToCyrFirst.get(curChar2) == null && latToCyrFirst.get(curChar) == null) {
                 if (" ".equals(curChar)) {
                     prevConvertCase = null;
                     result.append(' ');
@@ -236,11 +237,16 @@ public class LatinToUkrainian {
             if (prevConvertCase == null) {
                 convertCase = latToCyrFirst.get(curChar4);
                 if (convertCase == null) {
-                    convertCase = latToCyrFirst.get(curChar2);
+                    convertCase = latToCyrFirst.get(curChar3);
                     if (convertCase == null) {
-                        convertCase = latToCyrFirst.get(curChar);
+                        convertCase = latToCyrFirst.get(curChar2);
+                        if (convertCase == null) {
+                            convertCase = latToCyrFirst.get(curChar);
+                        } else {
+                            index += 1;
+                        }
                     } else {
-                        index += 1;
+                        index += 2;
                     }
                 } else {
                     index += 3;
