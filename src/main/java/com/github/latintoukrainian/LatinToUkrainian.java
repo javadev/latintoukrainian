@@ -84,6 +84,7 @@ public class LatinToUkrainian {
         put("Е", "E");
         put("Є", "Ie");
         put("Ж", "Zh");
+        put("Зг", "Zgh");
         put("З", "Z");
         put("И", "Y");
         put("І", "I");
@@ -115,6 +116,7 @@ public class LatinToUkrainian {
             put(Arrays.asList("д", "и"), "ї");
             put(Arrays.asList("л", "а"), "ї");
             put(Arrays.asList("в", "о"), "ї");
+            put(Arrays.asList("р", "а"), "ї");
             put(Arrays.asList("а", "р"), "’ї");
             put(Arrays.asList("х", "а"), "й");
         }});
@@ -124,6 +126,7 @@ public class LatinToUkrainian {
         }});
         put("ts", new HashMap<List<String>, String>() {{
             put(Arrays.asList("у", "ю"), "тьс");
+            put(Arrays.asList("н", "е"), "тьс");
         }});
     }};
 
@@ -157,6 +160,9 @@ public class LatinToUkrainian {
         put("Знамянка", "Знам’янка");
         put("Кишенки", "Кишеньки");
         put("Троц", "Троць");
+        put("Донетьськ", "Донецьк");
+        put("Згинут", "Згинуть");
+        put("вороженки", "вороженьки");
     }};
 
     private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", "."));
@@ -255,16 +261,22 @@ public class LatinToUkrainian {
             } else {
                 convertCase = latToCyrMiddle.get(curChar4);
                 if (convertCase == null) {
-                    convertCase = latToCyrMiddle.get(curChar2);
+                    convertCase = latToCyrMiddle.get(curChar3);
                     if (convertCase == null) {
-                        convertCase = latToCyrMiddle.get(curChar);
+                        convertCase = latToCyrMiddle.get(curChar2);
+                        if (convertCase == null) {
+                            convertCase = latToCyrMiddle.get(curChar);
+                        } else {
+                            index += 1;
+                        }
                     } else {
-                        index += 1;
+                        index += 2;
                     }
                 } else {
                     index += 3;
                 }
-                if (index >= name.length() || name.substring(index + INDEX_1, index + INDEX_2).equals(" ")) {
+                if (index >= name.length() || name.substring(index + INDEX_1, index + INDEX_2).equals(" ")
+                    || PUNCTUATIONS.contains(name.substring(index + INDEX_1, index + INDEX_2))) {
                     checkChar(result, convertCase, prevPrevConvertCase, prevConvertCase, END_TIPS);
                     checkWordsWithComma(result, WORDS_WITH_COMMA);
                 } else {
@@ -311,7 +323,7 @@ public class LatinToUkrainian {
     private static void checkWordsWithComma(StringBuilder result, Map<String, String> wordsWithComma) {
         for (final Map.Entry<String, String> word : wordsWithComma.entrySet()) {
             final String key = word.getKey();
-            if (key.length() <= result.length() && result.substring(result.length() - key.length(), result.length()).equals(key)) {
+            if (key.length() <= result.length() && result.substring(result.length() - key.length(), result.length()).equalsIgnoreCase(key)) {
                 result.replace(result.length() - key.length(), result.length(), word.getValue());
                 break;
             }
