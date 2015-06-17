@@ -121,6 +121,14 @@ public class LatinToUkrainian {
             put(Arrays.asList("х", "а"), "й");
             put(Arrays.asList("в", "а"), "й");
             put(Arrays.asList("к", "а"), "й");
+            put(Arrays.asList("г", "а"), "й");
+            put(Arrays.asList("в", "и"), "й");
+            put(Arrays.asList("д", "а"), "й");
+            put(Arrays.asList("л", "я"), "й");
+            put(Arrays.asList("н", "а"), "й");
+            put(Arrays.asList("ч", "а"), "й");
+            put(Arrays.asList("р", "и"), "й");
+            put(Arrays.asList("б", "а"), "й");
         }});
         put("k", new HashMap<List<String>, String>() {{
             put(Arrays.asList("н", "с"), "ьк");
@@ -130,6 +138,9 @@ public class LatinToUkrainian {
             put(Arrays.asList("у", "ю"), "тьс");
             put(Arrays.asList("н", "е"), "тьс");
             put(Arrays.asList("б", "є"), "тьс");
+            put(Arrays.asList("в", "и"), "тьс");
+            put(Arrays.asList("д", "е"), "тьс");
+            put(Arrays.asList("і", "ю"), "тьс");
         }});
     }};
 
@@ -150,6 +161,19 @@ public class LatinToUkrainian {
             put(Arrays.asList("ч", "и"), "й");
             put(Arrays.asList("н", "і"), "й");
             put(Arrays.asList("в", "і"), "й");
+            put(Arrays.asList("ц", "и"), "й");
+            put(Arrays.asList("н", "и"), "й");
+            put(Arrays.asList("р", "а"), "й");
+            put(Arrays.asList("д", "а"), "й");
+            put(Arrays.asList("с", "е"), "й");
+            put(Arrays.asList("в", "е"), "й");
+            put(Arrays.asList("м", "о"), "ї");
+            put(Arrays.asList("х", "а"), "й");
+            put(Arrays.asList("ш", "е"), "й");
+            put(Arrays.asList("в", "а"), "й");
+            put(Arrays.asList("л", "и"), "й");
+            put(Arrays.asList("т", "и"), "й");
+            put(Arrays.asList("л", "я"), "й");
         }});
         put("l", new HashMap<List<String>, String>() {{
             put(Arrays.asList("п", "і"), "ль");
@@ -184,9 +208,82 @@ public class LatinToUkrainian {
         put("волній", "вольній");
         put("забудте", "забудьте");
         put("помянути", "пом'янути");
+        put("ділос", "ділось");
+        put("взялос", "взялось");
+        put("урен", "урень");
+        put("завяло", "зав'яло");
+        put("Попливут", "Попливуть");
+        put("синому", "синьому");
+        put("погулят", "погулять");
+        put("сіят", "сіять");
+        put("розмовлят", "розмовлять");
+        put("піват", "півать");
+        put("дітис", "дітись");
+        put("Єст", "Єсть");
+        put("Заховат", "Заховать");
+        put("небудь їі", "небудь її");
+        put("їі", "їй");
+        put("слози", "сльози");
+        put("колис", "колись");
+        put("небуд", "небудь");
+        put("покидат", "покидать");
+        put("згадат", "згадать");
+        put("рожевій квіти", "рожевії квіти");
+        put("взят", "взять");
+        put("Ідіт", "Ідіть");
+        put("Летіт", "Летіть");
+        put("даст", "дасть");
+        put("пустят", "пустять");
+        put("писменні", "письменні");
+        put("навіт", "навіть");
+        put("гудят", "гудять");
+        put("сходит", "сходить");
+        put("світит", "світить");
+        put("слухат", "слухать");
+        put("скажут", "скажуть");
+        put("Поглузуют", "Поглузують");
+        put("покепкуют", "покепкують");
+        put("кинут", "кинуть");
+        put("спочивают", "спочивають");
+        put("батко", "батько");
+        put("гетмани", "гетьмани");
+        put("якогос", "якогось");
+        put("гетманства", "гетьманства");
+        put("Білш", "Більш");
+        put("осталос", "осталось");
+        put("розривают", "розривають");
+        put("співают", "співають");
+        put("Матрошу", "Матрьошу");
+        put("радост", "радость");
+        put("тілко", "тілько");
+        put("кричіт", "кричіть");
+        put("моіі", "моїй");
+        put("розвернулас", "розвернулась");
+        put("Вигравают", "Вигравають");
+        put("Ревут", "Ревуть");
+        put("стогнут", "стогнуть");
+        put("розсердилис", "розсердились");
+        put("Щос", "Щось");
+        put("Виступают", "Виступають");
+        put("озмовляют", "озмовляють");
+        put("розказуют", "розказують");
+        put("люлки", "люльки");
+        put("Полщі", "Польщі");
+        put("оддирают", "оддирають");
+        put("Кухол", "Кухоль");
+        put("ходит", "ходить");
+        put("Взявшис", "Взявшись");
+        put("Походжают", "Походжають");
+        put("Велможна", "Вельможна");
+        put("дивлюс", "дивлюсь");
+        put("слозами", "сльозами");
+        put("жит", "жить");
+        put("Тихесенко", "Тихесенько");
+        put("гомонит", "гомонить");
+        put("шумит", "шумить");
     }};
 
-    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
+    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "…", "—", "“", "”"));
 
     private static class ConvertCase {
         private final Map.Entry<String, String> convert;
@@ -200,10 +297,6 @@ public class LatinToUkrainian {
         }
         public boolean isLowcase() {
             return lowcase;
-        }
-        @Override
-        public String toString() {
-            return convert + (lowcase ? " lower" : " upper");
         }
     }
     private static final Map<String, List<ConvertCase>> latToCyrFirst;

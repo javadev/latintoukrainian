@@ -169,4 +169,12 @@ public class LatinToUkrainianTest {
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
     }
+
+    @Test
+    public void text03() throws Exception {
+        String text = IOUtils.toString(this.getClass().getResourceAsStream("text03.txt"), "UTF-8");
+        String latinic = UkrainianToLatin.generateLat(text);
+        String result = LatinToUkrainian.generateUkr(latinic);
+        assertEquals(result, text);
+    }
 }
