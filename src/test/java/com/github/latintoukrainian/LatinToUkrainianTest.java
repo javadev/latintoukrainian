@@ -133,7 +133,11 @@ public class LatinToUkrainianTest {
         equal("Serhii", "Сергій");
         equal("yakii", "якій");
         equal("tvoi", "твої");
+    }
 
+    @Test
+    public void words_with_numbers() {
+        equal("25 dekabria 1845,", "25 декабря 1845,");
     }
 
     @Test
@@ -158,4 +162,11 @@ public class LatinToUkrainianTest {
         assertEquals(result, text);
     }
 
+    @Test
+    public void text02() throws Exception {
+        String text = IOUtils.toString(this.getClass().getResourceAsStream("text02.txt"), "UTF-8");
+        String latinic = UkrainianToLatin.generateLat(text);
+        String result = LatinToUkrainian.generateUkr(latinic);
+        assertEquals(result, text);
+    }
 }

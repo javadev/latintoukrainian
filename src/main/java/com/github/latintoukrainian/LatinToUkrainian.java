@@ -119,6 +119,8 @@ public class LatinToUkrainian {
             put(Arrays.asList("р", "а"), "ї");
             put(Arrays.asList("а", "р"), "’ї");
             put(Arrays.asList("х", "а"), "й");
+            put(Arrays.asList("в", "а"), "й");
+            put(Arrays.asList("к", "а"), "й");
         }});
         put("k", new HashMap<List<String>, String>() {{
             put(Arrays.asList("н", "с"), "ьк");
@@ -145,6 +147,9 @@ public class LatinToUkrainian {
             put(Arrays.asList("б", "і"), "й");
             put(Arrays.asList("в", "и"), "й");
             put(Arrays.asList("ш", "і"), "й");
+            put(Arrays.asList("ч", "и"), "й");
+            put(Arrays.asList("н", "і"), "й");
+            put(Arrays.asList("в", "і"), "й");
         }});
         put("l", new HashMap<List<String>, String>() {{
             put(Arrays.asList("п", "і"), "ль");
@@ -173,9 +178,15 @@ public class LatinToUkrainian {
         put("пісн", "піснь");
         put("відобється", "відоб'ється");
         put("згомонит", "згомонить");
+        put("отоіді", "отойді");
+        put("кровю", "кров'ю");
+        put("семі", "сем'ї");
+        put("волній", "вольній");
+        put("забудте", "забудьте");
+        put("помянути", "пом'янути");
     }};
 
-    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", "."));
+    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
 
     private static class ConvertCase {
         private final Map.Entry<String, String> convert;
