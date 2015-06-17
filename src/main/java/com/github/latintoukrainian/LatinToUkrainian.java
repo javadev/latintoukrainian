@@ -127,6 +127,7 @@ public class LatinToUkrainian {
         put("ts", new HashMap<List<String>, String>() {{
             put(Arrays.asList("у", "ю"), "тьс");
             put(Arrays.asList("н", "е"), "тьс");
+            put(Arrays.asList("б", "є"), "тьс");
         }});
     }};
 
@@ -141,6 +142,9 @@ public class LatinToUkrainian {
             put(Arrays.asList("р", "и"), "й");
             put(Arrays.asList("с", "і"), "й");
             put(Arrays.asList("в", "о"), "ї");
+            put(Arrays.asList("б", "і"), "й");
+            put(Arrays.asList("в", "и"), "й");
+            put(Arrays.asList("ш", "і"), "й");
         }});
         put("l", new HashMap<List<String>, String>() {{
             put(Arrays.asList("п", "і"), "ль");
@@ -163,6 +167,12 @@ public class LatinToUkrainian {
         put("Донетьськ", "Донецьк");
         put("Згинут", "Згинуть");
         put("вороженки", "вороженьки");
+        put("своїі", "своїй");
+        put("козацкого", "козацького");
+        put("доленка", "доленька");
+        put("пісн", "піснь");
+        put("відобється", "відоб'ється");
+        put("згомонит", "згомонить");
     }};
 
     private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", "."));

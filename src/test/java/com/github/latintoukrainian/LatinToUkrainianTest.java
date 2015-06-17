@@ -19,7 +19,6 @@
 package com.github.latintoukrainian;
 
 import org.apache.commons.io.IOUtils;
-import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -112,7 +111,7 @@ public class LatinToUkrainianTest {
 
     @Test 
     public void punctuations() {
-        equal("I - pokazhem, shcho my, brattia, kozatskoho rodu!\n", "І - покажем, що ми, браття, козацкого роду!\n");
+        equal("I - pokazhem, shcho my, brattia, kozatskoho rodu!\n", "І - покажем, що ми, браття, козацького роду!\n");
     }
 
     @Test 
@@ -134,6 +133,7 @@ public class LatinToUkrainianTest {
         equal("Serhii", "Сергій");
         equal("yakii", "якій");
         equal("tvoi", "твої");
+
     }
 
     @Test
@@ -151,14 +151,10 @@ public class LatinToUkrainianTest {
     }
 
     @Test
-    @Ignore
     public void text01() throws Exception {
         String text = IOUtils.toString(this.getClass().getResourceAsStream("text01.txt"), "UTF-8");
-System.out.println("text - " + text);
         String latinic = UkrainianToLatin.generateLat(text);
-System.out.println("latinic - " + latinic);
         String result = LatinToUkrainian.generateUkr(latinic);
-System.out.println("result - " + result);
         assertEquals(result, text);
     }
 
