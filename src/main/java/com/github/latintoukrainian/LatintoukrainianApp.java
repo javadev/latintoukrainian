@@ -111,17 +111,8 @@ public class LatintoukrainianApp extends javax.swing.JFrame {
         generateResult();
         setLocation(Integer.valueOf(x), Integer.valueOf(y));
         setSize(new java.awt.Dimension(Integer.valueOf(width), Integer.valueOf(height)));
-        convertStreamToString(jTextPane1, "LatinToUkrainian.cs");
-        convertStreamToString(jTextPane10, "latintoukrainian.coffee");
-        convertStreamToString(jTextPane2, "latintoukrainian.dart");
         convertStreamToString(jTextPane3, "LatinToUkrainian.java");
         convertStreamToString(jTextPane4, "latintoukrainian.js");
-        convertStreamToString(jTextPane5, "LatinToUkrainian.rb");
-        convertStreamToString(jTextPane6, "latintoukrainian.ts");
-        convertStreamToString(jTextPane7, "LatinToUkrainian.groovy");
-        convertStreamToString(jTextPane8, "LatinToUkrainian.py");
-        convertStreamToString(jTextPane9, "LatinToUkrainian.php");
-        convertStreamToString(jTextPane11, "LatinToUkrainian.scala");
     }
     
     private void convertStreamToString(JTextPane jTextPane, String fileName) {
@@ -165,31 +156,13 @@ public class LatintoukrainianApp extends javax.swing.JFrame {
         jTextArea6 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        jTextPane10 = new javax.swing.JTextPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextPane3 = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextPane4 = new javax.swing.JTextPane();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        jTextPane9 = new javax.swing.JTextPane();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        jTextPane11 = new javax.swing.JTextPane();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Latin to ukrainian converter");
+        setTitle("Latin to Ukrainian converter");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel2.setMaximumSize(new java.awt.Dimension(610, 444));
@@ -268,34 +241,6 @@ public class LatintoukrainianApp extends javax.swing.JFrame {
 
         jTabbedPane3.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
-        jTextPane1.setEditable(false);
-        jTextPane1.setBorder(null);
-        jTextPane1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane1.setViewportView(jTextPane1);
-
-        jTabbedPane3.addTab("c#", jScrollPane1);
-
-        jTextPane10.setEditable(false);
-        jTextPane10.setBorder(null);
-        jTextPane10.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane12.setViewportView(jTextPane10);
-
-        jTabbedPane3.addTab("coffeescript", jScrollPane12);
-
-        jTextPane2.setEditable(false);
-        jTextPane2.setBorder(null);
-        jTextPane2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane2.setViewportView(jTextPane2);
-
-        jTabbedPane3.addTab("dart", jScrollPane2);
-
-        jTextPane7.setEditable(false);
-        jTextPane7.setBorder(null);
-        jTextPane7.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane9.setViewportView(jTextPane7);
-
-        jTabbedPane3.addTab("groovy", jScrollPane9);
-
         jTextPane3.setEditable(false);
         jTextPane3.setBorder(null);
         jTextPane3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -309,41 +254,6 @@ public class LatintoukrainianApp extends javax.swing.JFrame {
         jScrollPane5.setViewportView(jTextPane4);
 
         jTabbedPane3.addTab("js", jScrollPane5);
-
-        jTextPane9.setEditable(false);
-        jTextPane9.setBorder(null);
-        jTextPane9.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane11.setViewportView(jTextPane9);
-
-        jTabbedPane3.addTab("php", jScrollPane11);
-
-        jTextPane8.setEditable(false);
-        jTextPane8.setBorder(null);
-        jTextPane8.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane10.setViewportView(jTextPane8);
-
-        jTabbedPane3.addTab("python", jScrollPane10);
-
-        jTextPane5.setEditable(false);
-        jTextPane5.setBorder(null);
-        jTextPane5.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane7.setViewportView(jTextPane5);
-
-        jTabbedPane3.addTab("ruby", jScrollPane7);
-
-        jTextPane11.setEditable(false);
-        jTextPane11.setBorder(null);
-        jTextPane11.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane13.setViewportView(jTextPane11);
-
-        jTabbedPane3.addTab("scala", jScrollPane13);
-
-        jTextPane6.setEditable(false);
-        jTextPane6.setBorder(null);
-        jTextPane6.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jScrollPane8.setViewportView(jTextPane6);
-
-        jTabbedPane3.addTab("typescript", jScrollPane8);
 
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -467,36 +377,18 @@ public class LatintoukrainianApp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane10;
-    private javax.swing.JTextPane jTextPane11;
-    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
-    private javax.swing.JTextPane jTextPane8;
-    private javax.swing.JTextPane jTextPane9;
     // End of variables declaration//GEN-END:variables
     
 }
