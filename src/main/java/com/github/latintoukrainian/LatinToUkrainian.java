@@ -38,7 +38,7 @@ public class LatinToUkrainian {
     private static final int INDEX_3 = 3;
     private static final int INDEX_4 = 4;
     private static final int INDEX_5 = 5;
-    private static final Map<String, String> CYR_TO_LAT_FIRST = new LinkedHashMap<String, String>() {{
+    private static final Map<String, String> CYR_TO_LAT_FIRST = new LinkedHashMap<String, String>() { {
         put("А", "A");
         put("Б", "B");
         put("В", "V");
@@ -72,9 +72,9 @@ public class LatinToUkrainian {
         put("Щ", "Shch");
         put("Ю", "Yu");
         put("Я", "Ya");
-    }};
+    } };
 
-    private static final Map<String, String> CYR_TO_LAT_MIDDLE = new LinkedHashMap<String, String>() {{
+    private static final Map<String, String> CYR_TO_LAT_MIDDLE = new LinkedHashMap<String, String>() { {
         put("А", "A");
         put("Б", "B");
         put("В", "V");
@@ -108,10 +108,11 @@ public class LatinToUkrainian {
         put("Щ", "Shch");
         put("Ю", "Iu");
         put("Я", "Ia");
-    }};
+    } };
 
-    private static final Map<String, Map<List<String>, String>> MIDDLE_TIPS = new LinkedHashMap<String, Map<List<String>, String>>() {{
-        put("i", new HashMap<List<String>, String>() {{
+    private static final Map<String, Map<List<String>, String>> MIDDLE_TIPS =
+        new LinkedHashMap<String, Map<List<String>, String>>() { {
+        put("i", new HashMap<List<String>, String>() { {
             put(Arrays.asList("к", "и"), "ї");
             put(Arrays.asList("д", "и"), "ї");
             put(Arrays.asList("л", "а"), "ї");
@@ -129,23 +130,24 @@ public class LatinToUkrainian {
             put(Arrays.asList("ч", "а"), "й");
             put(Arrays.asList("р", "и"), "й");
             put(Arrays.asList("б", "а"), "й");
-        }});
-        put("k", new HashMap<List<String>, String>() {{
+        } });
+        put("k", new HashMap<List<String>, String>() { {
             put(Arrays.asList("н", "с"), "ьк");
             put(Arrays.asList("р", "с"), "ьк");
-        }});
-        put("ts", new HashMap<List<String>, String>() {{
+        } });
+        put("ts", new HashMap<List<String>, String>() { {
             put(Arrays.asList("у", "ю"), "тьс");
             put(Arrays.asList("н", "е"), "тьс");
             put(Arrays.asList("б", "є"), "тьс");
             put(Arrays.asList("в", "и"), "тьс");
             put(Arrays.asList("д", "е"), "тьс");
             put(Arrays.asList("і", "ю"), "тьс");
-        }});
-    }};
+        } });
+    } };
 
-    private static final Map<String, Map<List<String>, String>> END_TIPS = new LinkedHashMap<String, Map<List<String>, String>>() {{
-        put("i", new HashMap<List<String>, String>() {{
+    private static final Map<String, Map<List<String>, String>> END_TIPS =
+        new LinkedHashMap<String, Map<List<String>, String>>() { {
+        put("i", new HashMap<List<String>, String>() { {
             put(Arrays.asList("г", "і"), "й");
             put(Arrays.asList("д", "і"), "й");
             put(Arrays.asList("к", "и"), "й");
@@ -174,21 +176,21 @@ public class LatinToUkrainian {
             put(Arrays.asList("л", "и"), "й");
             put(Arrays.asList("т", "и"), "й");
             put(Arrays.asList("л", "я"), "й");
-        }});
-        put("l", new HashMap<List<String>, String>() {{
+        } });
+        put("l", new HashMap<List<String>, String>() { {
             put(Arrays.asList("п", "і"), "ль");
-        }});
-        put("n", new HashMap<List<String>, String>() {{
+        } });
+        put("n", new HashMap<List<String>, String>() { {
             put(Arrays.asList("м", "а"), "нь");
-        }});
-        put("ie", new HashMap<List<String>, String>() {{
+        } });
+        put("ie", new HashMap<List<String>, String>() { {
             put(Arrays.asList("о", "п"), "’є");
-        }});
-        put("k", new HashMap<List<String>, String>() {{
+        } });
+        put("k", new HashMap<List<String>, String>() { {
             put(Arrays.asList("е", "ц"), "ьк");
-        }});
-    }};
-    private static final Map<String, String> WORDS_WITH_COMMA = new LinkedHashMap<String, String>() {{
+        } });
+    } };
+    private static final Map<String, String> WORDS_WITH_COMMA = new LinkedHashMap<String, String>() { {
         put("батки", "батьки");
         put("Знамянка", "Знам’янка");
         put("Кишенки", "Кишеньки");
@@ -281,9 +283,10 @@ public class LatinToUkrainian {
         put("Тихесенко", "Тихесенько");
         put("гомонит", "гомонить");
         put("шумит", "шумить");
-    }};
+    } };
 
-    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "…", "—", "“", "”"));
+    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(
+        ",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "…", "—", "“", "”"));
 
     private static class ConvertCase {
         private final Map.Entry<String, String> convert;
@@ -299,21 +302,21 @@ public class LatinToUkrainian {
             return lowcase;
         }
     }
-    private static final Map<String, List<ConvertCase>> latToCyrFirst;
-    private static final Map<String, List<ConvertCase>> latToCyrMiddle;
+    private static final Map<String, List<ConvertCase>> LAT_TO_CYR_FIRST;
+    private static final Map<String, List<ConvertCase>> LAT_TO_CYR_MIDDLE;
 
     static {
-        latToCyrFirst = new HashMap<String, List<ConvertCase>>();
+        LAT_TO_CYR_FIRST = new HashMap<String, List<ConvertCase>>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_FIRST.entrySet()) {
-            putMyObject(latToCyrFirst, convert.getValue(), new ConvertCase(convert, false));
-            putMyObject(latToCyrFirst, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
-            putMyObject(latToCyrFirst, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
+            putMyObject(LAT_TO_CYR_FIRST, convert.getValue(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_FIRST, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_FIRST, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
-        latToCyrMiddle = new HashMap<String, List<ConvertCase>>();
+        LAT_TO_CYR_MIDDLE = new HashMap<String, List<ConvertCase>>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_MIDDLE.entrySet()) {
-            putMyObject(latToCyrMiddle, convert.getValue(), new ConvertCase(convert, false));
-            putMyObject(latToCyrMiddle, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
-            putMyObject(latToCyrMiddle, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
+            putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
     }
 
@@ -342,9 +345,8 @@ public class LatinToUkrainian {
             final String curChar2 = name.substring(index, Math.min(index + INDEX_2, name.length()));
             final String curChar3 = name.substring(index, Math.min(index + INDEX_3, name.length()));
             final String curChar4 = name.substring(index, Math.min(index + INDEX_4, name.length()));
-//System.out.println("curChar - " + curChar + ", curChar2 - " + curChar2);
-            if (latToCyrFirst.get(curChar4) == null && latToCyrFirst.get(curChar3) == null
-                && latToCyrFirst.get(curChar2) == null && latToCyrFirst.get(curChar) == null) {
+            if (LAT_TO_CYR_FIRST.get(curChar4) == null && LAT_TO_CYR_FIRST.get(curChar3) == null
+                && LAT_TO_CYR_FIRST.get(curChar2) == null && LAT_TO_CYR_FIRST.get(curChar) == null) {
                 if (" ".equals(curChar)) {
                     prevConvertCase = null;
                     result.append(' ');
@@ -355,39 +357,39 @@ public class LatinToUkrainian {
             }
             List<ConvertCase> convertCase;
             if (prevConvertCase == null) {
-                convertCase = latToCyrFirst.get(curChar4);
+                convertCase = LAT_TO_CYR_FIRST.get(curChar4);
                 if (convertCase == null) {
-                    convertCase = latToCyrFirst.get(curChar3);
+                    convertCase = LAT_TO_CYR_FIRST.get(curChar3);
                     if (convertCase == null) {
-                        convertCase = latToCyrFirst.get(curChar2);
+                        convertCase = LAT_TO_CYR_FIRST.get(curChar2);
                         if (convertCase == null) {
-                            convertCase = latToCyrFirst.get(curChar);
+                            convertCase = LAT_TO_CYR_FIRST.get(curChar);
                         } else {
-                            index += 1;
+                            index += INDEX_1;
                         }
                     } else {
-                        index += 2;
+                        index += INDEX_2;
                     }
                 } else {
-                    index += 3;
+                    index += INDEX_3;
                 }
                 checkChar(result, convertCase, prevPrevConvertCase, prevConvertCase, MIDDLE_TIPS);
             } else {
-                convertCase = latToCyrMiddle.get(curChar4);
+                convertCase = LAT_TO_CYR_MIDDLE.get(curChar4);
                 if (convertCase == null) {
-                    convertCase = latToCyrMiddle.get(curChar3);
+                    convertCase = LAT_TO_CYR_MIDDLE.get(curChar3);
                     if (convertCase == null) {
-                        convertCase = latToCyrMiddle.get(curChar2);
+                        convertCase = LAT_TO_CYR_MIDDLE.get(curChar2);
                         if (convertCase == null) {
-                            convertCase = latToCyrMiddle.get(curChar);
+                            convertCase = LAT_TO_CYR_MIDDLE.get(curChar);
                         } else {
-                            index += 1;
+                            index += INDEX_1;
                         }
                     } else {
-                        index += 2;
+                        index += INDEX_2;
                     }
                 } else {
-                    index += 3;
+                    index += INDEX_3;
                 }
                 if (index >= name.length() || name.substring(index + INDEX_1, index + INDEX_2).equals(" ")
                     || PUNCTUATIONS.contains(name.substring(index + INDEX_1, index + INDEX_2))) {
@@ -399,10 +401,10 @@ public class LatinToUkrainian {
             }
             prevPrevConvertCase = prevConvertCase;
             prevConvertCase = convertCase;
-       } 
+       }
        return result.toString();
     }
-    
+
     /**
      * Converts character from latinic to cyrilic.
      * @param result result buffer to store string in cyrilic
@@ -437,7 +439,8 @@ public class LatinToUkrainian {
     private static void checkWordsWithComma(StringBuilder result, Map<String, String> wordsWithComma) {
         for (final Map.Entry<String, String> word : wordsWithComma.entrySet()) {
             final String key = word.getKey();
-            if (key.length() <= result.length() && result.substring(result.length() - key.length(), result.length()).equalsIgnoreCase(key)) {
+            if (key.length() <= result.length() && result.substring(result.length() - key.length(),
+                result.length()).equalsIgnoreCase(key)) {
                 result.replace(result.length() - key.length(), result.length(), word.getValue());
                 break;
             }
@@ -445,8 +448,8 @@ public class LatinToUkrainian {
     }
 
     public static void main(String[] args) {
-        final String message = "The utility class to convert latin words to the ukrainian characters.\n\n" +
-            "For docs, license, tests, and downloads, see: https://github.com/javadev/latintoukrainian";
+        final String message = "The utility class to convert latin words to the ukrainian characters.\n\n"
+            + "For docs, license, tests, and downloads, see: https://github.com/javadev/latintoukrainian";
         System.out.println(message);
     }
 }

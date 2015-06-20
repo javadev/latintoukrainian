@@ -114,7 +114,7 @@ public class LatintoukrainianApp extends javax.swing.JFrame {
         convertStreamToString(jTextPane3, "LatinToUkrainian.java");
         convertStreamToString(jTextPane4, "latintoukrainian.js");
     }
-    
+
     private void convertStreamToString(JTextPane jTextPane, String fileName) {
         InputStreamReader is;
         try {

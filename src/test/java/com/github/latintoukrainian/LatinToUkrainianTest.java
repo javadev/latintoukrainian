@@ -109,12 +109,12 @@ public class LatinToUkrainianTest {
         equal("Yahotyn Yaroshenko Kostiantyn Znamianka Feodosiia", "Яготин Ярошенко Костянтин Знам’янка Феодосія");
     }
 
-    @Test 
+    @Test
     public void punctuations() {
         equal("I - pokazhem, shcho my, brattia, kozatskoho rodu!\n", "І - покажем, що ми, браття, козацького роду!\n");
     }
 
-    @Test 
+    @Test
     public void words_with_iy_in_the_middle() {
         equal("spilkuiutsia", "спілкуються");
         equal("tvoikh", "твоїх");
