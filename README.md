@@ -1,8 +1,9 @@
 # latintoukrainian
-The utility class to convert latin words to ukrainian characters
 
 [![Build Status](https://secure.travis-ci.org/javadev/latintoukrainian.png)](https://travis-ci.org/javadev/latintoukrainian)
 [![Coverage Status](https://coveralls.io/repos/javadev/latintoukrainian/badge.png?branch=master)](https://coveralls.io/r/javadev/latintoukrainian)
+
+The utility class to convert latin words to ukrainian characters
 
 Aа Аа Alushta Andrii -> Алушта Андрій<br/> 
 Bb Бб Borshchahivkа Borysenko -> Борщагівка Борисенко<br/>
