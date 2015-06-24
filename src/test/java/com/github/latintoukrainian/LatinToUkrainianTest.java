@@ -150,6 +150,11 @@ public class LatinToUkrainianTest {
     }
 
     @Test
+    public void words_with_first_i() {
+        equal("I vid sliz tykh hariachykh roztane", "І від сліз тих гарячих розтане");
+    }
+
+    @Test
     public void main() {
         LatinToUkrainian.main(new String[] {});
     }
@@ -181,6 +186,14 @@ public class LatinToUkrainianTest {
     @Test
     public void text04() throws Exception {
         String text = IOUtils.toString(this.getClass().getResourceAsStream("text04.txt"), "UTF-8");
+        String latinic = UkrainianToLatin.generateLat(text);
+        String result = LatinToUkrainian.generateUkr(latinic);
+        assertEquals(result, text);
+    }
+
+    @Test
+    public void text05() throws Exception {
+        String text = IOUtils.toString(this.getClass().getResourceAsStream("text05.txt"), "UTF-8");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
