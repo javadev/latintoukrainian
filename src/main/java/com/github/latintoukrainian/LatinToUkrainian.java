@@ -133,6 +133,8 @@ public class LatinToUkrainian {
             put(Arrays.asList("м", "о"), "ї");
             put(Arrays.asList("з", "і"), "й");
             put(Arrays.asList("д", "і"), "й");
+            put(Arrays.asList("ч", "і"), "й");
+            put(Arrays.asList("к", "і"), "й");
         } });
         put("k", new HashMap<List<String>, String>() { {
             put(Arrays.asList("н", "с"), "ьк");
@@ -188,6 +190,7 @@ public class LatinToUkrainian {
             put(Arrays.asList("д", "е"), "й");
             put(Arrays.asList("т", "а"), "й");
             put(Arrays.asList("м", "і"), "й");
+            put(Arrays.asList("ш", "и"), "й");
         } });
         put("l", new HashMap<List<String>, String>() { {
             put(Arrays.asList("п", "і"), "ль");
@@ -240,6 +243,7 @@ public class LatinToUkrainian {
         put("мову їі", "мову її");
         put("люби їі", "люби її");
         put("небо їі", "небо її");
+        put("все їі", "все її");
         put("їі", "їй");
         put("слози", "сльози");
         put("колис", "колись");
@@ -358,6 +362,18 @@ public class LatinToUkrainian {
         put("зоіках", "зойках");
         put("тмі", "тьмі");
         put("любит", "любить");
+        put("Енеіда", "Енеїда");
+        put("Енеї", "Еней");
+        put("хлопец", "хлопець");
+        put("хот", "хоть");
+        put("Удавс", "Удавсь");
+        put("Пятами", "П'ятами");
+        put("Троі", "Трої");
+        put("Розкудкудакалас", "Розкудкудакалась");
+        put("Іого", "Його");
+        put("Здававс", "Здававсь");
+        put("дядко", "дядько");
+        put("Прямове", "Пріамове");
     } };
 
     private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(
