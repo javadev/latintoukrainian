@@ -1,5 +1,6 @@
 # latintoukrainian
 
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.javadev/latintoukrainian.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.github.javadev%22%20AND%20a%3A%22latintoukrainian%22)
 [![Build Status](https://secure.travis-ci.org/javadev/latintoukrainian.png)](https://travis-ci.org/javadev/latintoukrainian)
 [![Coverage Status](https://coveralls.io/repos/javadev/latintoukrainian/badge.png?branch=master)](https://coveralls.io/r/javadev/latintoukrainian)
 
@@ -39,3 +40,4 @@ Yu іu Юю на початку слова в інших позиціях  Yurii
 Ya ia Яя на початку слова в інших позиціях Yahotyn Yaroshenko Kostiantyn Znamianka Feodosiia -> Яготин Ярошенко Костянтин Знам’янка Феодосія<br/>
 
 [![Screen short](https://raw.github.com/javadev/latintoukrainian/master/latintoukrainian.png)](https://github.com/javadev/latintoukrainian/)
+[![Screen short](https://raw.github.com/javadev/latintoukrainian/master/latintoukrainian2.png)](https://github.com/javadev/latintoukrainian/)

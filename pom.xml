@@ -90,7 +90,7 @@
       <plugin>
         <groupId>org.eluder.coveralls</groupId>
         <artifactId>coveralls-maven-plugin</artifactId>
-        <version>2.2.0</version>
+        <version>3.1.0</version>
         <configuration>
           <repoToken>9Ue9lIAgTktCQSm2FKq1AO2wX2OkSkbpU</repoToken>
         </configuration>
@@ -98,7 +98,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.7.0.201403182114</version>
+        <version>0.7.2.201409121644</version>
         <configuration>
           <excludes>
             <exclude>**/LatintoukrainianApp*.class</exclude>

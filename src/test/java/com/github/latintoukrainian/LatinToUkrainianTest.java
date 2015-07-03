@@ -19,6 +19,7 @@
 package com.github.latintoukrainian;
 
 import org.apache.commons.io.IOUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -124,6 +125,7 @@ public class LatinToUkrainianTest {
     public void words_with_soft_sign() {
         equal("batky", "батьки");
         equal("yakii spilkuiutsia tvoi batky", "якій спілкуються твої батьки");
+        equal("za nei; spetsialnymy zakhodamy", "за неї; спеціальними заходами");
     }
 
     @Test
@@ -210,6 +212,15 @@ public class LatinToUkrainianTest {
     @Test
     public void text07() throws Exception {
         String text = IOUtils.toString(this.getClass().getResourceAsStream("text07.txt"), "UTF-8");
+        String latinic = UkrainianToLatin.generateLat(text);
+        String result = LatinToUkrainian.generateUkr(latinic);
+        assertEquals(result, text);
+    }
+
+    @Test
+    @Ignore
+    public void text08() throws Exception {
+        String text = IOUtils.toString(this.getClass().getResourceAsStream("text08.txt"), "UTF-8");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);

@@ -38,7 +38,7 @@ public class LatinToUkrainian {
     private static final int INDEX_3 = 3;
     private static final int INDEX_4 = 4;
     private static final int INDEX_5 = 5;
-    private static final Map<String, String> CYR_TO_LAT_FIRST = new LinkedHashMap<String, String>() {{
+    private static final Map<String, String> CYR_TO_LAT_FIRST = new LinkedHashMap<String, String>() { {
         put("А", "A");
         put("Б", "B");
         put("В", "V");
@@ -72,9 +72,9 @@ public class LatinToUkrainian {
         put("Щ", "Shch");
         put("Ю", "Yu");
         put("Я", "Ya");
-    }};
+    } };
 
-    private static final Map<String, String> CYR_TO_LAT_MIDDLE = new LinkedHashMap<String, String>() {{
+    private static final Map<String, String> CYR_TO_LAT_MIDDLE = new LinkedHashMap<String, String>() { {
         put("А", "A");
         put("Б", "B");
         put("В", "V");
@@ -108,16 +108,16 @@ public class LatinToUkrainian {
         put("Щ", "Shch");
         put("Ю", "Iu");
         put("Я", "Ia");
-    }};
+    } };
 
-    private static final Map<String, Map<List<String>, String>> MIDDLE_TIPS = new LinkedHashMap<String, Map<List<String>, String>>() {{
-        put("i", new HashMap<List<String>, String>() {{
+    private static final Map<String, Map<List<String>, String>> MIDDLE_TIPS =
+        new LinkedHashMap<String, Map<List<String>, String>>() { {
+        put("i", new HashMap<List<String>, String>() { {
             put(Arrays.asList("к", "и"), "ї");
             put(Arrays.asList("д", "и"), "ї");
             put(Arrays.asList("л", "а"), "ї");
             put(Arrays.asList("в", "о"), "ї");
             put(Arrays.asList("р", "а"), "ї");
-            put(Arrays.asList("а", "р"), "’ї");
             put(Arrays.asList("х", "а"), "й");
             put(Arrays.asList("в", "а"), "й");
             put(Arrays.asList("к", "а"), "й");
@@ -129,23 +129,47 @@ public class LatinToUkrainian {
             put(Arrays.asList("ч", "а"), "й");
             put(Arrays.asList("р", "и"), "й");
             put(Arrays.asList("б", "а"), "й");
-        }});
-        put("k", new HashMap<List<String>, String>() {{
+            put(Arrays.asList("в", "е"), "й");
+            put(Arrays.asList("м", "о"), "ї");
+            put(Arrays.asList("з", "і"), "й");
+            put(Arrays.asList("д", "і"), "й");
+            put(Arrays.asList("ч", "і"), "й");
+            put(Arrays.asList("к", "і"), "й");
+            put(Arrays.asList("ц", "і"), "й");
+            put(Arrays.asList("с", "і"), "й");
+            put(Arrays.asList("г", "і"), "й");
+            put(Arrays.asList("р", "о"), "й");
+            put(Arrays.asList("в", "і"), "й");
+            put(Arrays.asList("л", "е"), "ї");
+            put(Arrays.asList("м", "а"), "й");
+        } });
+        put("k", new HashMap<List<String>, String>() { {
             put(Arrays.asList("н", "с"), "ьк");
             put(Arrays.asList("р", "с"), "ьк");
-        }});
-        put("ts", new HashMap<List<String>, String>() {{
+        } });
+        put("ts", new HashMap<List<String>, String>() { {
             put(Arrays.asList("у", "ю"), "тьс");
             put(Arrays.asList("н", "е"), "тьс");
             put(Arrays.asList("б", "є"), "тьс");
             put(Arrays.asList("в", "и"), "тьс");
             put(Arrays.asList("д", "е"), "тьс");
             put(Arrays.asList("і", "ю"), "тьс");
-        }});
-    }};
+            put(Arrays.asList("і", "є"), "тьс");
+            put(Arrays.asList("л", "ю"), "тьс");
+            put(Arrays.asList("м", "е"), "тьс");
+            put(Arrays.asList("ю", "є"), "тьс");
+            put(Arrays.asList("а", "ю"), "тьс");
+            put(Arrays.asList("а", "є"), "тьс");
+            put(Arrays.asList("у", "є"), "тьс");
+            put(Arrays.asList("д", "я"), "тьс");
+            put(Arrays.asList("я", "є"), "тьс");
+            put(Arrays.asList("ю", "ю"), "тьс");
+        } });
+    } };
 
-    private static final Map<String, Map<List<String>, String>> END_TIPS = new LinkedHashMap<String, Map<List<String>, String>>() {{
-        put("i", new HashMap<List<String>, String>() {{
+    private static final Map<String, Map<List<String>, String>> END_TIPS =
+        new LinkedHashMap<String, Map<List<String>, String>>() { {
+        put("i", new HashMap<List<String>, String>() { {
             put(Arrays.asList("г", "і"), "й");
             put(Arrays.asList("д", "і"), "й");
             put(Arrays.asList("к", "и"), "й");
@@ -174,27 +198,44 @@ public class LatinToUkrainian {
             put(Arrays.asList("л", "и"), "й");
             put(Arrays.asList("т", "и"), "й");
             put(Arrays.asList("л", "я"), "й");
-        }});
-        put("l", new HashMap<List<String>, String>() {{
+            put(Arrays.asList("ч", "е"), "й");
+            put(Arrays.asList("н", "е"), "ї");
+            put(Arrays.asList("т", "о"), "й");
+            put(Arrays.asList("д", "е"), "й");
+            put(Arrays.asList("т", "а"), "й");
+            put(Arrays.asList("м", "і"), "й");
+            put(Arrays.asList("ш", "и"), "й");
+            put(Arrays.asList("н", "о"), "ї");
+            put(Arrays.asList("т", "е"), "й");
+            put(Arrays.asList("к", "о"), "ї");
+            put(Arrays.asList("т", "і"), "ї");
+            put(Arrays.asList("г", "о"), "ї");
+            put(Arrays.asList("ц", "і"), "й");
+            put(Arrays.asList("ш", "о"), "ї");
+            put(Arrays.asList("м", "е"), "й");
+            put(Arrays.asList("ж", "о"), "ї");
+            put(Arrays.asList("о", "є"), "ї");
+        } });
+        put("l", new HashMap<List<String>, String>() { {
             put(Arrays.asList("п", "і"), "ль");
-        }});
-        put("n", new HashMap<List<String>, String>() {{
+        } });
+        put("n", new HashMap<List<String>, String>() { {
             put(Arrays.asList("м", "а"), "нь");
-        }});
-        put("ie", new HashMap<List<String>, String>() {{
+        } });
+        put("ie", new HashMap<List<String>, String>() { {
             put(Arrays.asList("о", "п"), "’є");
-        }});
-        put("k", new HashMap<List<String>, String>() {{
+        } });
+        put("k", new HashMap<List<String>, String>() { {
             put(Arrays.asList("е", "ц"), "ьк");
-        }});
-    }};
-    private static final Map<String, String> WORDS_WITH_COMMA = new LinkedHashMap<String, String>() {{
+        } });
+    } };
+    private static final Map<String, String> WORDS_WITH_COMMA = new LinkedHashMap<String, String>() { {
         put("батки", "батьки");
         put("Знамянка", "Знам’янка");
         put("Кишенки", "Кишеньки");
         put("Троц", "Троць");
         put("Донетьськ", "Донецьк");
-        put("Згинут", "Згинуть");
+        put("гинут", "гинуть");
         put("вороженки", "вороженьки");
         put("своїі", "своїй");
         put("козацкого", "козацького");
@@ -222,6 +263,14 @@ public class LatinToUkrainian {
         put("Єст", "Єсть");
         put("Заховат", "Заховать");
         put("небудь їі", "небудь її");
+        put("красу їі", "красу її");
+        put("мову їі", "мову її");
+        put("люби їі", "люби її");
+        put("небо їі", "небо її");
+        put("все їі", "все її");
+        put("умов їі", "умов її");
+        put("всю їі", "всю її");
+        put("ресурси їі", "ресурси її");
         put("їі", "їй");
         put("слози", "сльози");
         put("колис", "колись");
@@ -230,7 +279,7 @@ public class LatinToUkrainian {
         put("згадат", "згадать");
         put("рожевій квіти", "рожевії квіти");
         put("взят", "взять");
-        put("Ідіт", "Ідіть");
+        put("діт", "діть");
         put("Летіт", "Летіть");
         put("даст", "дасть");
         put("пустят", "пустять");
@@ -255,12 +304,12 @@ public class LatinToUkrainian {
         put("співают", "співають");
         put("Матрошу", "Матрьошу");
         put("радост", "радость");
-        put("тілко", "тілько");
+        put("ілко", "ілько");
         put("кричіт", "кричіть");
         put("моіі", "моїй");
         put("розвернулас", "розвернулась");
         put("Вигравают", "Вигравають");
-        put("Ревут", "Ревуть");
+        put("евут", "евуть");
         put("стогнут", "стогнуть");
         put("розсердилис", "розсердились");
         put("Щос", "Щось");
@@ -281,9 +330,180 @@ public class LatinToUkrainian {
         put("Тихесенко", "Тихесенько");
         put("гомонит", "гомонить");
         put("шумит", "шумить");
-    }};
+        put("болит", "болить");
+        put("робит", "робить");
+        put("заплачут", "заплачуть");
+        put("білше", "більше");
+        put("слозу", "сльозу");
+        put("Маріне", "Мар’їне");
+        put("карій", "карії");
+        put("чорній", "чорнії");
+        put("сміялос", "сміялось");
+        put("темній", "темнії");
+        put("хотілос", "хотілось");
+        put("Козацку", "Козацьку");
+        put("Збират", "Збирать");
+        put("козацкій", "козацькії");
+        put("В Україні витают", "В Украйні витають");
+        put("минулас", "минулась");
+        put("родилас", "родилась");
+        put("Козацкая", "Козацькая");
+        put("спочит", "спочить");
+        put("діялос", "діялось");
+        put("плакат", "плакать");
+        put("сльози за Україну", "сльози за Украйну");
+        put("живут", "живуть");
+        put("серденко", "серденько");
+        put("побачат", "побачать");
+        put("втираїте", "втирайте");
+        put("поливают", "поливають");
+        put("засиплют", "засиплють");
+        put("ненко", "ненько");
+        put("Гетте", "Гетьте");
+        put("Проминут", "Проминуть");
+        put("молодій", "молодії");
+        put("кріз", "крізь");
+        put("сміятис", "сміятись");
+        put("Без надій", "Без надії");
+        put("сподіватис", "сподіватись");
+        put("Гет", "Геть");
+        put("лит", "лить");
+        put("лодовая", "льодовая");
+        put("зійдут", "зійдуть");
+        put("кремяную", "крем'яную");
+        put("камін", "камінь");
+        put("підіймат", "підіймать");
+        put("хвилку", "хвильку");
+        put("серденку", "серденьку");
+        put("тма", "тьма");
+        put("нудга", "нудьга");
+        put("мерт", "мерть");
+        put("важенко", "важенько");
+        put("забється", "заб'ється");
+        put("велми", "вельми");
+        put("промін", "промінь");
+        put("юбіт", "юбіть");
+        put("мит", "мить");
+        put("соловіну", "солов'їну");
+        put("горит", "горить");
+        put("зоіках", "зойках");
+        put("тмі", "тьмі");
+        put("любит", "любить");
+        put("Енеіда", "Енеїда");
+        put("Енеї", "Еней");
+        put("хлопец", "хлопець");
+        put("хот", "хоть");
+        put("Удавс", "Удавсь");
+        put("Пятами", "П'ятами");
+        put("Троі", "Трої");
+        put("Розкудкудакалас", "Розкудкудакалась");
+        put("Іого", "Його");
+        put("Здававс", "Здававсь");
+        put("дядко", "дядько");
+        put("Прямове", "Пріамове");
+        put("націоналностей", "національностей");
+        put("спираючис", "спираючись");
+        put("піклуючис", "піклуючись");
+        put("соцялну", "соціальну");
+        put("відповідалніст", "відповідальність");
+        put("керуючис", "керуючись");
+        put("ЗАГАЛНІ", "ЗАГАЛЬНІ");
+        put("соцялна", "соціальна");
+        put("їй життя", "її життя");
+        put("здоровя", "здоров'я");
+        put("чест", "честь");
+        put("гідніст", "гідність");
+        put("недоторканніст", "недоторканність");
+        put("соцялною", "соціальною");
+        put("визначают", "визначають");
+        put("спрямованіст", "спрямованість");
+        put("діялності", "діяльності");
+        put("діялніст", "діяльність");
+        put("обовязком", "обов'язком");
+        put("безпосередно", "безпосередньо");
+        put("їй органами", "її органами");
+        put("третой", "третьої");
+        put("четвертой", "четвертої");
+        put("їй поділу", "її поділу");
+        put("законодавчоі", "законодавчої");
+        put("виконавчоі", "виконавчої");
+        put("здійснюют", "здійснюють");
+        put("прямої дій", "прямої дії");
+        put("обовязковіст", "обов'язковість");
+        put("націоналного", "національного");
+        put("суперечат", "суперечать");
+        put("суспілного", "суспільного");
+        put("всій територій", "всій території");
+        put("вілний", "вільний");
+        put("російскої", "російської");
+        put("їй націоналних", "її національних");
+        put("націоналних", "національних");
+        put("їй історичної", "її історичної");
+        put("Конституцій України", "Конституції України");
+        put("сприяє консолідацій", "сприяє консолідації");
+        put("української націй", "української нації");
+        put("култури", "культури");
+        put("културної", "культурної");
+        put("націонално", "національно");
+        put("културних", "культурних");
+        put("проживают", "проживають");
+        put("їй надра", "її надра");
+        put("в межах територій", "в межах території");
+        put("континенталного", "континентального");
+        put("шелфу", "шельфу");
+        put("обєктами", "об'єктами");
+        put("Власніст", "Власність");
+        put("зобовязує", "зобов'язує");
+        put("суспілству", "суспільству");
+        put("субєктів", "суб'єктів");
+        put("субєкти", "суб'єкти");
+        put("націоналним", "національним");
+        put("багацтвом", "багатством");
+        put("Суспілне", "Суспільне");
+        put("обовязкова", "обов'язкова");
+        put("а територій", "а території");
+        put("Чорнобилскої", "Чорнобильської");
+        put("територялної", "територіальної");
+        put("їй економічної", "її економічної");
+        put("всого", "всього");
+        put("їй суверенітету", "її суверенітету");
+        put("війскові", "військові");
+        put("можут", "можуть");
+        put("соцялний", "соціальний");
+        put("перебувают", "перебувають");
+        put("війскових", "військових");
+        put("буд-яких", "будь-яких");
+        put("формуван", "формувань");
+        put("Зовнішнополітична", "Зовнішньополітична");
+        put("загалновизнаними", "загальновизнаними");
+        put("зобовязані", "зобов'язані");
+        put("повноважен", "повноважень");
+        put("горизонталних", "горизонтальних");
+        put("синого", "синього");
+        put("колорів", "кольорів");
+        put("Війска", "Війська");
+        put("Запорізкого", "Запорізького");
+        put("націоналний", "національний");
+        put("Вербицкого", "Вербицького");
+        put("СВОБОДИ ТА ОБОВЯЗКИ", "СВОБОДИ ТА ОБОВ'ЯЗКИ");
+        put("обовязки", "обов'язки");
+        put("вілні", "вільні");
+        put("цому", "цьому");
+        put("суспілством", "суспільством");
+        put("їй особистості", "її особистості");
+        put("мают", "мають");
+        put("обмежен", "обмежень");
+        put("колору", "кольору");
+        put("переконан", "переконань");
+        put("соцялного", "соціального");
+        put("івніст", "івність");
+        put("громадско", "громадсько");
+        put("културній", "культурній");
+    } };
 
-    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "…", "—", "“", "”"));
+    private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(
+        ",", "-", "!", "?", ":", ";", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "…", "—", "“", "”",
+        "«", "»", "[", "]", "–", "(", ")", "№", "{", "}", "/"));
 
     private static class ConvertCase {
         private final Map.Entry<String, String> convert;
@@ -299,21 +519,21 @@ public class LatinToUkrainian {
             return lowcase;
         }
     }
-    private static final Map<String, List<ConvertCase>> latToCyrFirst;
-    private static final Map<String, List<ConvertCase>> latToCyrMiddle;
+    private static final Map<String, List<ConvertCase>> LAT_TO_CYR_FIRST;
+    private static final Map<String, List<ConvertCase>> LAT_TO_CYR_MIDDLE;
 
     static {
-        latToCyrFirst = new HashMap<String, List<ConvertCase>>();
+        LAT_TO_CYR_FIRST = new HashMap<String, List<ConvertCase>>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_FIRST.entrySet()) {
-            putMyObject(latToCyrFirst, convert.getValue(), new ConvertCase(convert, false));
-            putMyObject(latToCyrFirst, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
-            putMyObject(latToCyrFirst, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
+            putMyObject(LAT_TO_CYR_FIRST, convert.getValue(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_FIRST, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_FIRST, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
-        latToCyrMiddle = new HashMap<String, List<ConvertCase>>();
+        LAT_TO_CYR_MIDDLE = new HashMap<String, List<ConvertCase>>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_MIDDLE.entrySet()) {
-            putMyObject(latToCyrMiddle, convert.getValue(), new ConvertCase(convert, false));
-            putMyObject(latToCyrMiddle, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
-            putMyObject(latToCyrMiddle, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
+            putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
+            putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
     }
 
@@ -342,54 +562,55 @@ public class LatinToUkrainian {
             final String curChar2 = name.substring(index, Math.min(index + INDEX_2, name.length()));
             final String curChar3 = name.substring(index, Math.min(index + INDEX_3, name.length()));
             final String curChar4 = name.substring(index, Math.min(index + INDEX_4, name.length()));
-//System.out.println("curChar - " + curChar + ", curChar2 - " + curChar2);
-            if (latToCyrFirst.get(curChar4) == null && latToCyrFirst.get(curChar3) == null
-                && latToCyrFirst.get(curChar2) == null && latToCyrFirst.get(curChar) == null) {
+            if (LAT_TO_CYR_FIRST.get(curChar4) == null && LAT_TO_CYR_FIRST.get(curChar3) == null
+                && LAT_TO_CYR_FIRST.get(curChar2) == null && LAT_TO_CYR_FIRST.get(curChar) == null) {
                 if (" ".equals(curChar)) {
                     prevConvertCase = null;
                     result.append(' ');
                 } else if (curChar.matches("\\n") || PUNCTUATIONS.contains(curChar)) {
+                    prevPrevConvertCase = null;
                     result.append(curChar);
                 }
                 continue;
             }
             List<ConvertCase> convertCase;
             if (prevConvertCase == null) {
-                convertCase = latToCyrFirst.get(curChar4);
+                convertCase = LAT_TO_CYR_FIRST.get(curChar4);
                 if (convertCase == null) {
-                    convertCase = latToCyrFirst.get(curChar3);
+                    convertCase = LAT_TO_CYR_FIRST.get(curChar3);
                     if (convertCase == null) {
-                        convertCase = latToCyrFirst.get(curChar2);
+                        convertCase = LAT_TO_CYR_FIRST.get(curChar2);
                         if (convertCase == null) {
-                            convertCase = latToCyrFirst.get(curChar);
+                            convertCase = LAT_TO_CYR_FIRST.get(curChar);
                         } else {
-                            index += 1;
+                            index += INDEX_1;
                         }
                     } else {
-                        index += 2;
+                        index += INDEX_2;
                     }
                 } else {
-                    index += 3;
+                    index += INDEX_3;
                 }
                 checkChar(result, convertCase, prevPrevConvertCase, prevConvertCase, MIDDLE_TIPS);
             } else {
-                convertCase = latToCyrMiddle.get(curChar4);
+                convertCase = LAT_TO_CYR_MIDDLE.get(curChar4);
                 if (convertCase == null) {
-                    convertCase = latToCyrMiddle.get(curChar3);
+                    convertCase = LAT_TO_CYR_MIDDLE.get(curChar3);
                     if (convertCase == null) {
-                        convertCase = latToCyrMiddle.get(curChar2);
+                        convertCase = LAT_TO_CYR_MIDDLE.get(curChar2);
                         if (convertCase == null) {
-                            convertCase = latToCyrMiddle.get(curChar);
+                            convertCase = LAT_TO_CYR_MIDDLE.get(curChar);
                         } else {
-                            index += 1;
+                            index += INDEX_1;
                         }
                     } else {
-                        index += 2;
+                        index += INDEX_2;
                     }
                 } else {
-                    index += 3;
+                    index += INDEX_3;
                 }
                 if (index >= name.length() || name.substring(index + INDEX_1, index + INDEX_2).equals(" ")
+                    || name.substring(index + INDEX_1, index + INDEX_2).matches("\\n")
                     || PUNCTUATIONS.contains(name.substring(index + INDEX_1, index + INDEX_2))) {
                     checkChar(result, convertCase, prevPrevConvertCase, prevConvertCase, END_TIPS);
                     checkWordsWithComma(result, WORDS_WITH_COMMA);
@@ -399,10 +620,10 @@ public class LatinToUkrainian {
             }
             prevPrevConvertCase = prevConvertCase;
             prevConvertCase = convertCase;
-       } 
+       }
        return result.toString();
     }
-    
+
     /**
      * Converts character from latinic to cyrilic.
      * @param result result buffer to store string in cyrilic
@@ -421,7 +642,7 @@ public class LatinToUkrainian {
             for (final Map.Entry<List<String>, String> tip : tipMap.entrySet()) {
                 if (tip.getKey().get(0).equalsIgnoreCase(prevPrevConvertCase.get(0).getConvert().getKey())
                     && tip.getKey().get(1).equalsIgnoreCase(prevConvertCase.get(0).getConvert().getKey())) {
-                    cyrName = tip.getValue();
+                    cyrName = Character.isUpperCase(cyrName.charAt(0)) ? tip.getValue().toUpperCase() : tip.getValue();
                     break;
                 }
             }
@@ -437,7 +658,8 @@ public class LatinToUkrainian {
     private static void checkWordsWithComma(StringBuilder result, Map<String, String> wordsWithComma) {
         for (final Map.Entry<String, String> word : wordsWithComma.entrySet()) {
             final String key = word.getKey();
-            if (key.length() <= result.length() && result.substring(result.length() - key.length(), result.length()).equalsIgnoreCase(key)) {
+            if (key.length() <= result.length() && result.substring(result.length() - key.length(),
+                result.length()).equalsIgnoreCase(key)) {
                 result.replace(result.length() - key.length(), result.length(), word.getValue());
                 break;
             }
@@ -445,8 +667,8 @@ public class LatinToUkrainian {
     }
 
     public static void main(String[] args) {
-        final String message = "The utility class to convert latin words to the ukrainian characters.\n\n" +
-            "For docs, license, tests, and downloads, see: https://github.com/javadev/latintoukrainian";
+        final String message = "The utility class to convert latin words to the ukrainian characters.\n\n"
+            + "For docs, license, tests, and downloads, see: https://github.com/javadev/latintoukrainian";
         System.out.println(message);
     }
 }
