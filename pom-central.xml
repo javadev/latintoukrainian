@@ -5,7 +5,7 @@
   <groupId>com.github.javadev</groupId>
   <artifactId>latintoukrainian</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>Latin to Ukrainian converter</name>
   <description>The utility class to convert latin words to the ukrainian characters</description>
   <url>https://github.com/javadev/latintoukrainian</url>
