@@ -6,4 +6,9 @@ jdk:
   - oraclejdk7
   - oraclejdk8
 
+addons:
+   hosts:
+       - travis
+   hostname: travis
+
 script: mvn test jacoco:report coveralls:report
