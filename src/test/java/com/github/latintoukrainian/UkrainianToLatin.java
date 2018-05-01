@@ -77,7 +77,7 @@ public final class UkrainianToLatin {
         ShchShch("Щщ"),
         YuIu("Юю"),
         YaIa("Яя");
-        private String cyrilic;
+        private final String cyrilic;
         private Convert(String cyrilic) {
             this.cyrilic = cyrilic;
         }
@@ -90,7 +90,7 @@ public final class UkrainianToLatin {
         }
 
     }
-    private static Map<String, ConvertCase> cyrToLat;
+    private static final Map<String, ConvertCase> cyrToLat;
 
     private static class ConvertCase {
         private final Convert convert;
