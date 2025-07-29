@@ -1,7 +1,7 @@
 # latintoukrainian
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.javadev/latintoukrainian.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.github.javadev%22%20AND%20a%3A%22latintoukrainian%22)
-[![Java CI](https://github.com/javadev/latintoukrainian/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/javadev/latintoukrainian/actions/workflows/maven.yml)
+[![Java CI](https://github.com/javadev/latintoukrainian/actions/workflows/maven.yml/badge.svg)](https://github.com/javadev/latintoukrainian/actions/workflows/maven.yml)
 [![Coverage Status](https://coveralls.io/repos/javadev/latintoukrainian/badge.svg?branch=main)](https://coveralls.io/r/javadev/latintoukrainian)
 
 The utility class to convert latin words to ukrainian characters
