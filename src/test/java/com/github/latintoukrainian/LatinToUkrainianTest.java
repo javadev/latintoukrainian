@@ -18,10 +18,14 @@
 
 package com.github.latintoukrainian;
 
-import org.apache.commons.io.IOUtils;
 import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * LatinToUkrainianTest unit test.
@@ -157,13 +161,13 @@ public class LatinToUkrainianTest {
     }
 
     @Test
-    public void main() {
+    public void testMain() {
         LatinToUkrainian.main(new String[] {});
     }
 
     @Test
     public void text01() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text01.txt"), "UTF-8");
+        String text = readFile("text01.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -171,7 +175,7 @@ public class LatinToUkrainianTest {
 
     @Test
     public void text02() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text02.txt"), "UTF-8");
+        String text = readFile("text02.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -179,7 +183,7 @@ public class LatinToUkrainianTest {
 
     @Test
     public void text03() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text03.txt"), "UTF-8");
+        String text = readFile("text03.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -187,7 +191,7 @@ public class LatinToUkrainianTest {
 
     @Test
     public void text04() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text04.txt"), "UTF-8");
+        String text = readFile("text04.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -195,7 +199,7 @@ public class LatinToUkrainianTest {
 
     @Test
     public void text05() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text05.txt"), "UTF-8");
+        String text = readFile("text05.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -203,7 +207,7 @@ public class LatinToUkrainianTest {
 
     @Test
     public void text06() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text06.txt"), "UTF-8");
+        String text = readFile("text06.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -211,7 +215,7 @@ public class LatinToUkrainianTest {
 
     @Test
     public void text07() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text07.txt"), "UTF-8");
+        String text = readFile("text07.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
@@ -220,9 +224,14 @@ public class LatinToUkrainianTest {
     @Test
     @Ignore
     public void text08() throws Exception {
-        String text = IOUtils.toString(this.getClass().getResourceAsStream("text08.txt"), "UTF-8");
+        String text = readFile("text08.txt");
         String latinic = UkrainianToLatin.generateLat(text);
         String result = LatinToUkrainian.generateUkr(latinic);
         assertEquals(result, text);
+    }
+
+    private String readFile(String fileName) throws IOException {
+        return new String(Files.readAllBytes(Paths.get("src/test/resources/com/github/latintoukrainian/" + fileName)),
+                StandardCharsets.UTF_8);
     }
 }
