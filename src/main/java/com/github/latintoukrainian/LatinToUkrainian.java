@@ -654,9 +654,15 @@ public class LatinToUkrainian {
         put("буд-якими", "будь-якими");
         put("порушен", "порушень");
         put("бездіялністю", "бездіяльністю");
-        put("рішен", "рішень");
         put("зворотної дій", "зворотної дії");
         put("помякшуют", "пом'якшують");
+        put("скасовуют", "скасовують");
+        put("вілним", "вільним");
+        put("зобовязаний", "зобов'язаний");
+        put("індивідуалний", "індивідуальний");
+        put("онституцій", "онституції");
+        put("пятії", "п'ятій");
+        put("сесій", "сесії");
     } };
 
     private static final Set<String> PUNCTUATIONS = new HashSet<String>(Arrays.asList(
@@ -681,13 +687,13 @@ public class LatinToUkrainian {
     private static final Map<String, List<ConvertCase>> LAT_TO_CYR_MIDDLE;
 
     static {
-        LAT_TO_CYR_FIRST = new HashMap<String, List<ConvertCase>>();
+        LAT_TO_CYR_FIRST = new HashMap<>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_FIRST.entrySet()) {
             putMyObject(LAT_TO_CYR_FIRST, convert.getValue(), new ConvertCase(convert, false));
             putMyObject(LAT_TO_CYR_FIRST, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
             putMyObject(LAT_TO_CYR_FIRST, convert.getValue().toLowerCase(), new ConvertCase(convert, true));
         }
-        LAT_TO_CYR_MIDDLE = new HashMap<String, List<ConvertCase>>();
+        LAT_TO_CYR_MIDDLE = new HashMap<>();
         for (final Map.Entry<String, String> convert : CYR_TO_LAT_MIDDLE.entrySet()) {
             putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue(), new ConvertCase(convert, false));
             putMyObject(LAT_TO_CYR_MIDDLE, convert.getValue().toUpperCase(), new ConvertCase(convert, false));
@@ -698,7 +704,7 @@ public class LatinToUkrainian {
     private static <T> void putMyObject(Map<String, List<T>> map, String key, T value) {
         final List<T> myList;
         if (map.get(key) == null) {
-            myList = new ArrayList<T>();
+            myList = new ArrayList<>();
             map.put(key, myList);
         } else {
             myList = map.get(key);
