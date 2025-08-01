@@ -232,6 +232,6 @@ public class LatinToUkrainianTest {
 
     private String readFile(String fileName) throws IOException {
         return new String(Files.readAllBytes(Paths.get("src/test/resources/com/github/latintoukrainian/" + fileName)),
-                StandardCharsets.UTF_8);
+                StandardCharsets.UTF_8).replace("\r", "");
     }
 }
